@@ -9,4 +9,5 @@
   height: var(--input-height);
   min-width: var(--input-min-width);
   padding: 0 1rem;
+  width: 100%;
 }
