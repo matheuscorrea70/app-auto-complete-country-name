@@ -1,6 +1,8 @@
 import ListData from "./listData";
 import { ListContainerProps } from "../autoComplete.types";
 
+import "./listContainer.css";
+
 const ListContainer = ({
   isError,
   isFetching,
@@ -9,18 +11,26 @@ const ListContainer = ({
   setSelected,
 }: ListContainerProps) => {
   if (isFetching) {
-    return <div className="auto-complete__loader">Loading...</div>;
+    return <div className="list-container">Loading...</div>;
   }
 
   if (isError) {
     return (
-      <div className="auto-complete__error">
+      <div className="list-container">
         Oops! There was an error while fetching the countries!
       </div>
     );
   }
 
-  return <ListData data={data} selected={selected} setSelected={setSelected} />;
+  if (data.length) {
+    return (
+      <div className="list-container">
+        <ListData data={data} selected={selected} setSelected={setSelected} />
+      </div>
+    );
+  }
+
+  return null;
 };
 
 export default ListContainer;

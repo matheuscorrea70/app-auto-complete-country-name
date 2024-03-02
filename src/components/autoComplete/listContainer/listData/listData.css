@@ -1,0 +1,16 @@
+.list-data .list-data__item {
+  margin: 0.5rem 0;
+}
+
+.list-data .list-data__button {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+
+.list-data .list-data__button:hover {
+  background-color: #3d3d3d;
+}
