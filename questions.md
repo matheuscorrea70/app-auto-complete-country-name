@@ -1,18 +1,18 @@
 # Questions
 
-1. What is the difference between Component and PureComponent?
+## 1. What is the difference between Component and PureComponent?
 Give an example where it might break my app.
 
 The class component extended by the `Component` will re-render every time that your parent re-renders and the class component extended by the `PureComponent` will re-render just if at least one prop that was passed to this component changed, to check that the react use a shallow comparison.
 It might break if you change an inner value or key of an object without changing the reference that way the PureComponent won't re-render.
 
 
-2. Context + ShouldComponentUpdate might be dangerous. Why is
+## 2. Context + ShouldComponentUpdate might be dangerous. Why is
 that?
 
 Because the context can cause re-render in the component without passing to the `shouldComponentUpdate` function.
 
-3. Describe 3 ways to pass information from a component to its
+## 3. Describe 3 ways to pass information from a component to its
 PARENT.
 
 - Using callback functions
@@ -54,17 +54,17 @@ const ChildComponent = () => {
 ```
 
 
-4. Give 2 ways to prevent components from re-rendering.
+## 4. Give 2 ways to prevent components from re-rendering.
 
 Using the `shouldComponentUpdate` method of a class component and using the `React.memo` in a functional component.
 
 
-5. What is a fragment and why do we need it? Give an example where it might break my app.
+## 5. What is a fragment and why do we need it? Give an example where it might break my app.
 
 It's used to group elements and component without creating a real element. It can break the app when you use CSS with an immediate child and there is a fragment between the parent and child, making the child element not be stylized 
 
 
-6. Give 3 examples of the HOC pattern.
+## 6. Give 3 examples of the HOC pattern.
 
 - To validate if the user is authenticate.
 ```
@@ -104,7 +104,7 @@ const withRouter = (Comp) => {
 ```
 
 
-7. What's the difference in handling exceptions in promises,
+## 7. What's the difference in handling exceptions in promises,
 callbacks and async...await?
 
 - promises
@@ -144,13 +144,13 @@ try {
 ```
 
 
-8. How many arguments does setState take and why is it async.
+## 8. How many arguments does setState take and why is it async.
 
 Just one argument that can be a number, string, object, function, etc.
 The `setState` is async because it accumulates with others `setState` to re-render together and optimize the performance
 
 
-9. List the steps needed to migrate a Class to Function
+## 9. List the steps needed to migrate a Class to Function
 Component.
 
 - Create a new functional component.
@@ -163,7 +163,7 @@ Component.
 - Change the code `this.props.*` to use the props directly.
 
 
-10. List a few ways styles can be used with components.
+## 10. List a few ways styles can be used with components.
 
 - Creating a css file and importing this file into the component
 - Using the attribute style of each element.
@@ -171,7 +171,7 @@ Component.
 - Using a CSS pre-processor
 
 
-11. How to render an HTML string coming from the server.
+## 11. How to render an HTML string coming from the server.
 
 Using the attribute `dangerouslySetInnerHTML` of the element you want to render the HTML. It's important to sanitize this HTML to prevent JS injection.
 ```
