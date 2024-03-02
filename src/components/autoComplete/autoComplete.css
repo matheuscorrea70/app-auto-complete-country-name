@@ -1,0 +1,29 @@
+.auto-complete {
+  --input-height: 3.188rem;
+  --input-min-width: 15rem;
+
+  position: relative;
+}
+
+.auto-complete .auto-complete__input {
+  height: var(--input-height);
+  min-width: var(--input-min-width);
+  padding: 0 1rem;
+}
+
+.auto-complete .auto-complete__data,
+.auto-complete .auto-complete__loader,
+.auto-complete .auto-complete__error {
+  position: absolute;
+  top: var(--input-height);
+  left: 0;
+  right: 0;
+  padding: 0.75rem;
+}
+
+.auto-complete .auto-complete__data .auto-complete__data__item {
+  padding: 0.25rem 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
